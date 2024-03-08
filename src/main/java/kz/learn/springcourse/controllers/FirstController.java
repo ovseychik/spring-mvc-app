@@ -33,7 +33,7 @@ public class FirstController {
         int b = Integer.parseInt(request.getParameter("b"));
         String action = request.getParameter("action");
 
-        int result;
+        double result;
 
         switch (action) {
             case "multiplication":
@@ -46,7 +46,7 @@ public class FirstController {
                 result = a - b;
                 break;
             case "division":
-                result = a / b;
+                result = a / (double) b;
                 break;
             default:
                 result = 0;
