@@ -28,11 +28,12 @@ public class FirstController {
     @GetMapping("/calculator")
     public String calculatorPage(HttpServletRequest request,
                                  Model model) {
+
         int a = Integer.parseInt(request.getParameter("a"));
         int b = Integer.parseInt(request.getParameter("b"));
         String action = request.getParameter("action");
 
-        int result = 0;
+        int result;
 
         switch (action) {
             case "multiplication":
@@ -41,7 +42,7 @@ public class FirstController {
             case "addition":
                 result = a + b;
                 break;
-            case "substraction":
+            case "subtraction":
                 result = a - b;
                 break;
             case "division":
